@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:backgroundTint="@color/off_white">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <View
+            android:id="@+id/line"
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:layout_marginHorizontal="20sp"
+            android:layout_marginTop="27sp"
+            android:layout_marginBottom="5sp"
+            android:background="@color/dark_white"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/newsImage"
+            android:layout_width="match_parent"
+            android:layout_height="200sp"
+            android:layout_marginTop="20sp"
+            android:scaleType="centerCrop"
+            app:layout_constraintCircleRadius="20dp"
+            app:layout_constraintTop_toBottomOf="@id/line"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize50Percent" />
+
+        <ImageView
+            android:id="@+id/articleSaved"
+            android:layout_width="40sp"
+            android:layout_height="40sp"
+            android:layout_margin="10dp"
+            android:background="@drawable/fab_background_green"
+            android:contentDescription="@string/background_image"
+            android:elevation="10dp"
+            android:padding="10sp"
+            android:src="@drawable/save_filled"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="@id/newsImage"
+            app:layout_constraintTop_toTopOf="@id/newsImage" />
+
+        <ImageView
+            android:id="@+id/articleUnSaved"
+            android:layout_width="40sp"
+            android:layout_height="40sp"
+            android:layout_margin="10dp"
+            android:background="@drawable/fab_background_white"
+            android:contentDescription="@string/background_image"
+            android:elevation="10dp"
+            android:padding="10sp"
+            android:src="@drawable/saved"
+            app:layout_constraintEnd_toEndOf="@id/newsImage"
+            app:layout_constraintTop_toTopOf="@id/newsImage" />
+
+        <TextView
+            android:id="@+id/newsHeading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8sp"
+            android:fontFamily="@font/archivo_bold"
+            android:textColor="#181818"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/newsImage" />
+
+        <TextView
+            android:id="@+id/newsContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8sp"
+            android:ellipsize="end"
+            android:fontFamily="@font/archivo"
+            android:maxLines="3"
+            android:textColor="#181818"
+            android:textSize="22sp"
+            app:layout_constraintTop_toBottomOf="@id/newsHeading" />
+
+        <TextView
+            android:id="@+id/newsDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="20sp"
+            android:fontFamily="@font/archivo"
+            android:textColor="#C1C0BF"
+            android:textSize="18sp"
+            app:layout_constraintTop_toBottomOf="@id/newsContent" />
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/readMore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20sp"
+            android:backgroundTint="@color/light_green"
+            android:paddingHorizontal="30sp"
+            android:text="@string/read"
+            android:textColor="@color/white"
+            app:cornerRadius="10sp"
+            app:elevation="10dp"
+            app:layout_constraintEnd_toStartOf="@id/save"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/newsDate" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20sp"
+            android:backgroundTint="@color/light_green"
+            android:paddingHorizontal="30sp"
+            android:text="@string/save"
+            android:textColor="@color/white"
+            app:cornerRadius="10sp"
+            app:elevation="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/readMore"
+            app:layout_constraintTop_toBottomOf="@id/newsDate" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20sp"
+            android:backgroundTint="@color/light_green"
+            android:paddingHorizontal="30sp"
+            android:text="@string/Delete"
+            android:textColor="@color/white"
+            android:visibility="invisible"
+            app:cornerRadius="10sp"
+            app:elevation="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/readMore"
+            app:layout_constraintTop_toBottomOf="@id/newsDate" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="15sp"
+            app:layout_constraintTop_toBottomOf="@id/readMore" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.cardview.widget.CardView>

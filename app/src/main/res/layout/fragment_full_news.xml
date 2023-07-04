@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="5"
+    tools:context=".fragments.FullNewsFragment">
+
+
+    <LinearLayout
+        android:id="@+id/llOne"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageButton
+                android:id="@+id/back"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_margin="34dp"
+                android:background="@android:color/transparent"
+                android:contentDescription="@string/back"
+                android:elevation="10dp"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="12dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/back"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/white" />
+
+            <ImageButton
+                android:id="@+id/save"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_margin="34dp"
+                android:background="@android:color/transparent"
+                android:contentDescription="@string/save"
+                android:elevation="20dp"
+                android:paddingHorizontal="15dp"
+                android:paddingVertical="13dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/saved"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/newsImage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/background_image"
+                android:scaleType="centerCrop"
+                android:src="@drawable/news_image" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:background="@drawable/dim_overlay"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <TextView
+                android:id="@+id/newsDate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="34sp"
+                android:layout_marginBottom="8sp"
+                android:fontFamily="@font/archivo"
+                android:gravity="start"
+                android:text="@string/dummy_date"
+                android:textColor="@color/off_white"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toTopOf="@id/newsTitle"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+
+            <TextView
+                android:id="@+id/newsTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="34sp"
+                android:layout_marginBottom="15sp"
+                android:fontFamily="@font/archivo_bold"
+                android:gravity="start"
+                android:text="@string/dummy_text"
+                android:textColor="@color/white"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3"
+        android:background="@drawable/card_background"
+        android:labelFor="@id/llOne"
+        android:orientation="vertical"
+        android:outlineProvider="none"
+        android:paddingHorizontal="34sp"
+        android:paddingTop="30sp"
+        android:translationY="-10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/authorImage"
+                android:layout_width="60sp"
+                android:layout_height="60sp"
+                android:background="@drawable/image_background"
+                app:srcCompat="@drawable/person" />
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5sp"
+                android:layout_weight="3"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/authorName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10sp"
+                    android:fontFamily="@font/archivo"
+                    android:text="@string/dummy_name1"
+                    android:textColor="#181818"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/authorId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10sp"
+                    android:layout_marginTop="8sp"
+                    android:fontFamily="@font/archivo"
+                    android:text="@string/dummy_name1"
+                    android:textColor="#c1c0bf"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/saveBtn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="2"
+                android:backgroundTint="@color/light_green"
+                android:gravity="center"
+                android:paddingHorizontal="30sp"
+                android:text="@string/save"
+                android:textColor="@color/white"
+                app:cornerRadius="10sp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/openWebView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/archivo"
+            android:gravity="end"
+            android:text="@string/open_in_web"
+            android:textColor="#0000FF"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/newsContent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20sp"
+            android:fontFamily="@font/archivo"
+            android:textColor="#181818"
+            android:textSize="22sp" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

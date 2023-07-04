@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">NewsBreeze</string>
+    <string name="search_hint">Search</string>
+    <string name="newsbreeze">NewsBreeze</string>
+    <string name="dummy_text">Lorem ipsum dolor sit amet consectetur adi</string>
+    <string name="dummy_name1">James Adam</string>
+    <string name="open_in_web">Open in web</string>
+    <string name="dummy_date">29-03-21</string>
+    <string name="back">back</string>
+    <string name="save">Save</string>
+    <string name="background_image">background_image</string>
+    <string name="Delete">delete</string>
+    <string name="saved">Saved</string>
+    <string name="read">Read</string>
+</resources>
