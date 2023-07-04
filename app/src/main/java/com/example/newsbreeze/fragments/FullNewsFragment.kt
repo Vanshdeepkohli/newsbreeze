@@ -47,6 +47,12 @@ class FullNewsFragment : Fragment() {
                 Glide.with(requireContext()).load(it.urlToImage).into(newsImage)
                 authorName.text = it.author
                 authorId.text = it.source.name
+
+                if(it.isSaved == 1){
+                    saveBtn.text = "Saved"
+                }else{
+                    saveBtn.text = "Save"
+                }
             }
         }
 
